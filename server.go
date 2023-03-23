@@ -80,12 +80,9 @@ func ServerFunc(str string) error {
 	conn, err := ln.Accept()
 	check(err)
 	
-	fmt.Println(packet.Value[0])
-	fmt.Println(packet.Value[1])
 	// server sends individual packets
 	for i := 0; i<len(packet.Value); i++ {
-		fmt.Println(packet.Value[1] + "\n")
-		_, _ = conn.Write([]byte(packet.Value[i]))
+		_, _ = conn.Write([]byte(packet.Value[i] + "\n\n"))
 
 	}
 
