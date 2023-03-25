@@ -1,1 +1,2 @@
-netpackets4go<br>a fun little program for sending data packets over a TCP localhost network in golang
+packets-in-golang <br>
+a simple server and client implementation for sending packets over a localhost network
